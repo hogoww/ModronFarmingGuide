@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{booktabs}
 \usepackage{hyperref}
+\usepackage{xspace}
 
 \title{Idle Modron Briv Farming}
 \author{Hogo}
@@ -22,43 +23,49 @@
 
 
 %add champion inlined image https://tex.stackexchange.com/questions/374192/how-to-use-figures-as-inline-images
-\newcommand{\artemis}{Artemis }
-\newcommand{\arkhan}{Arkhan }
-\newcommand{\azaka}{Azaka }
-\newcommand{\blackViper}{Black Viper }
-\newcommand{\briv}{Briv }
-\newcommand{\baeloth}{Baeloth }
-\newcommand{\desmond}{Desmond }
-\newcommand{\dragonbait}{Dragonbait }
-\newcommand{\jarlaxle}{Jarlaxle }
-\newcommand{\minsc}{Minsc }
-\newcommand{\nayeli}{Nayeli }
-\newcommand{\nahara}{Nahara }
-\newcommand{\nerys}{Nerys }
-\newcommand{\rust}{Rust }
-\newcommand{\shandie}{Shandie }
-\newcommand{\tyril}{Tyril }
-\newcommand{\yorven}{Yorven }
-\newcommand{\zorbu}{Zorbu }
+\newcommand{\artemis}{Artemis\xspace}
+\newcommand{\arkhan}{Arkhan\xspace}
+\newcommand{\azaka}{Azaka\xspace}
+\newcommand{\blackViper}{Black Viper\xspace}
+\newcommand{\briv}{Briv\xspace}
+\newcommand{\baeloth}{Baeloth\xspace}
+\newcommand{\deekin}{Deekin\xspace}
+\newcommand{\desmond}{Desmond\xspace}
+\newcommand{\dragonbait}{Dragonbait\xspace}
+\newcommand{\havilar}{Havilar\xspace}
+\newcommand{\hewmaan}{Hew Maan\xspace}
+\newcommand{\jarlaxle}{Jarlaxle\xspace}
+\newcommand{\melf}{Melf\xspace}
+\newcommand{\minsc}{Minsc\xspace}
+\newcommand{\nayeli}{Nayeli\xspace}
+\newcommand{\nahara}{Nahara\xspace}
+\newcommand{\nerys}{Nerys\xspace}
+\newcommand{\rust}{Rust\xspace}
+\newcommand{\sentry}{Sentry\xspace}
+\newcommand{\shandie}{Shandie\xspace}
+\newcommand{\tyril}{Tyril\xspace}
+\newcommand{\yorven}{Yorven\xspace}
+\newcommand{\widdle}{Widdle\xspace}
+\newcommand{\zorbu}{Zorbu\xspace}
 
 \section{Disclaimer}
 
 This is a work in progress.
 I work on it when I find the time and or feel like it.
 You may notice that there are a lot of placeholders for now.
-I'm updating it at my own rhythm.
 Particularly, I am yet to add pictures.
 This is planned, it's just easier to add a lot of text first.
 
-If you have remarks on things that are \textbf{already} typed in, please feel free to comment on it in the modron briv thread on the Idle champion discord.
+If you have remarks on things that are \textbf{already} typed in, please feel free to comment on it in the modron \briv thread on the Idle champion discord.
 (links will be added someday).
+You can also suggest some more placeholders section I will write in the future !
 Or wisp me on Discord directly: hogo\#8547.
 If you're polite and nice, I usually am nice too :)
 
 \section{Introduction}
 
 Using Modron briv farming is an advanced technique use to idle gem farm in Idle champion more efficiently.
-This guide is an improvement on the work of Zeke et al (todoref) hopefully clearing some things up, and adding some knowledge over this technique that we learn by discussing this on the discord (todoref).
+This guide is  an improvement on  \href{https://www.reddit.com/r/idlechampions/comments/rbldh0/automated_briv_stacking_without_scripting/}{Zeke's guide} hopefully clearing some things up, and adding some knowledge over this technique that we learn by discussing this on the discord (todoref).
 
 It looks to use \textbf{\briv} which is the single most powerful speed champion in the game at this time.
 \briv is able to jump over one or many areas thanks to his unnatural haste ability.
@@ -87,7 +94,7 @@ But don't loose hope !
 Once you get it, you'll be able to set up anywhere you'll like !
 
 
-\section{Definition}
+\section{Definitions}
 
 I start here by giving you some definitions that will ease the comprehension of the technique.
 Particularly, I set the definitions of multiple Idle Champion defined concepts as well as adding a few of ours.
@@ -206,6 +213,9 @@ Requierements:
 
 Optional (but pretty nice !)
 \begin{itemize}
+    \item Other champions improving Speed other than \briv (see Section \ref{sec:stepFour}).
+    Recommended: \widdle (2), \shandie (6) and \hewmaan (8).
+    Optional: \deekin (1), \nahara (3) and \sentry (4), 
     \item A Click Wall Extender
 \end{itemize}
  
@@ -252,10 +262,10 @@ Usually, multiple zones in a row need to have a certain property.
     Therefore using \zorbu as a click wall extender does not work.
     However, he does more damage against this kind of enemies.
     Therefore, if he is the BUD setter, he smooths the transitions toward the stacking area in the same manner a click wall extender does.
-    \item[\azaka] \azaka has a debuff that increases the champions damages when fighting outdoor.
+    \item[\azaka] (Slot 12) \azaka has a debuff that increases the champions damages when fighting outdoor.
     Therefore the transition from the click wall to the stacking zone may work if you find an adventure on which your jumps get from outdoor to indoor, with the required zone spread.
-    \item[\nerys] \nerys has a small debuff against undeads that does not scale, but seem to apply on click damage.
-    This can help if you have a small zone spread.
+    \item[\nerys] (Slot 12) \nerys has a small debuff against undeads that does not scale, but seem to apply on click damage.
+    This can help if you have a small zone spread before Minsc kicks in, for example.
 \end{description}
 
 Others may be a good fit, but are not as good as the ones described here.
@@ -358,10 +368,86 @@ Once you know at what time your stacks are high enough, you can prepare your BUD
 You should use a trigger champion that buffs your BUD setter.
 But first, let's add some speed !
 
+\paragraph{Party size and lag}
+
+Before you start know that adding a champions adds code behavior, image rendering and many things.
+Therefore it adds lag.
+If you can remove a character or a pet at some point
+
 \paragraph{Speed champions first !}
 
-todo
+Before actually working on the BUD, it's time to add speed champions !
+You either consider them as mandatory for your purpose (shandie for example), or if it is possible (such as Sentry).
+You will have to manage with those constraints.
+Usually we consider that if a slot can stay empty, that's better than a character that adds too little benefit.
 
+
+
+\begin{description}
+    \item[\deekin] \deekin is a very good plug and play champion.
+    Put him anywhere and enjoy !
+    He increases the speed of enemy pop.
+    The specialization is \textit{Boss Wants Speed} (right).
+    He is improved by a feat that is looted in gold chests.
+    It is unaffected by his gear.
+    Using \deekin and \widdle is redundant and usually should be avoided.
+    Usually we consider that it is either \deekin OR \widdle.
+    
+    \item[\widdle] \widdle is usually considered to be better than \deekin.
+    She should be next to as many champion as possible.
+    I have read multiple time that once \widdle's \textit{Tasty Friends} has 1000\%, it's capped (I have not verified myself).
+    She increases the speed of enemy pop.
+    The specialization matters little, because she only exclude a few champion from each, and not many of them are relevant for gem farm.
+    \textit{Tasty Friends} is buffed by \widdle 4th item.
+    She has a Golden Epic, which seems to not be very useful from a speed standpoint as the cap is achieved quite easily.
+    Using \deekin and \widdle is redundant and usually should be avoided.
+    Usually we consider that it is either \deekin OR \widdle.
+    
+    \item[\nahara] \nahara reduces quests requirement as long as she \textit{should} kill enemies even though they die from clicks.
+    Her placement imports little, but if you want to have as much benefit from her as possible, she should be your BUD setter.
+    The specialization is \textit{A Skilled Lyre} (right).
+    Her speed skill \textit{To Amuse or Avenge} is not affected by gear/feats at this time.
+    Note: it can apparently become pretty laggy when you hit 100 enemies while stacking.
+    Note2: see common note on quest requirement after this list.
+    
+    \item[\sentry] \sentry reduces quest requirements if she wasn't hit by enemy on the previous area.
+    Her placement does not change anything.
+    The specialization is \textit{Echo's Will} (middle).
+    \textit{Echo: Resolution} is buffed by \sentry 4th item.
+    It has a cap at 100\% reduction, which you can compute on Byteglow.
+    She has a golden epic for this item, that does not make much sense to buy as the cap is quite low already.
+    Note: She is conflicting with Baeloth, so if you can use another trigger than baeloth, that's usually better !
+    Note2: see common note on quest requirement after this list.
+    
+    
+    \item[\shandie] Probably the best plug and play champion.
+    After a minute without any champion being attacked, \shandie increases the speed of the game.
+    Her speed ability is not affected by her placement.
+    %She buffs damages for the column in front of her with \textit{Explosive Arrow} depending on enemy hit by her attack as well as in a radius of two cases with \textit{Agile Allies}.
+    %Usually I'd advise to not rely on \textit{Explosive Arrow}.
+    %The number of enemy hit might be inconsistent, particularly when stacking on range enemies.
+    Her speed ability \textit{Dash} is only affected by specialization \textit{Ranger Training} (left).
+    
+    \item[\hewmaan] \hewmaan is the second best speed champion, right after briv (even after the recent nerf).
+    They increases the number of quest item looted and enemy kill counts.
+    Their speed ability depends on their placement in the formation.
+    \hewmaan.
+    They should be in the front column in 3 and 4 column formation, or in the front two column in other formations.
+    On top of that, \hewmaan has to be adjacent to as many champions as possible.
+    The specialization is \textit{Carefully Balanced} (right).
+    Their \textit{Teamwork} ability is buffed by the 4th item as well as very good feats.
+    It is capped, check out Byteglow.
+    Note: see common note on quest requirement after this list.
+    \item[\havilar] //TO CHECK, I'm Lazy, so not now. 
+    Unlike what's said in Zeke's guide, \havilar's ability has been fixed and is not usable anymore.
+    \item[\melf] Considered to be less good than an empty spot by the scripting community.
+    I trust them, and do not explain him further.
+\end{description}
+
+Note on quest requirement: Quests requirements reductions might not all be worth it at once.
+%tocheck
+%Particularly, we've seen low interest in having \sentry and \nahara (Thanks to Primate's).
+//TODO more detailed note
 
 \paragraph{Choosing a trigger champion.}
 
@@ -428,11 +514,13 @@ It worked once !\newline
 It will always work !\newline
 
 No.\newline
-Things are often inconsistent.
+Things are often inconsistent, particularly at the start.
 We usually have to watch a bit to see how the farm is behaving.
 Don't worry, you'll get a sense of when this will be inconsistent at some point.
 Plus, monitoring does not mean looking all the time.
 Just check whether it continues jumping from time to time !
+It is always more important to look for consistency than squeezing a bit more performance out of your gem farm.
+Always save your working setup before experimenting with another setup.
 
 Things that may add inconsistency that we identified are:
 \begin{description}
@@ -505,8 +593,20 @@ Back to the great Tall Tale adventure
 \subsection{Extra Free Gems}
 
 
+
 \section{Frequently Asked Questions}
-\subsection{Dealing With Too High Favors}
+
+
+\subsection{Dealing With Favors Too High}
+
+If you have too high favor, you have multiple choices:
+\begin{description}
+    \item[Increase Reset level] If you are able to revisit how high you reset your adventure that could be a good first approach.
+    \item[Reduce your favors] Reduce your favor by upgrading a legendary with the correct favor.
+    \item[Change campaign] If your ideal campaign has too much favor to work, you may change.
+    See our list of suggestions in Table \ref{tbl:adventures}.
+\end{description}
+
 \subsection{I Want to Set Up On a Specific Adventure.}
 
 
@@ -534,24 +634,103 @@ The key word being approximately.
 You may need less, you may need more.
 I personally tend to always take a bit more than I need, just in case.
 
+\subsection{How about Modron cores ?}
+
+What modron core should I use?
+Ideally you want to use the \textbf{Speed} core.
+The level 10 node that increase the game speed is the best node in it.
+The lvl 15 node may add a bit of inconsistency.
+
+Any other modron core that has automation available is fine.
+This method can be used to level up modron cores.
+
+
+\subsection{Should I stack on multiple zones}
+
+tl;dr: no.
+Rationale behind this is that you get a maximum number of stacks per seconds when you have more enemies spawned.
+Therefore it's always more efficient to stack on one zone.
+If you cannot, it's probably because you want to reset too high.
+
 \subsection{High Favor Farming}
+
+\subsubsection{e90-e100 favor}
+I want between e90 and e100 favor !
+This is definitely farmable.
+You have to go around z2000 a few times (add link to jim technique) and Azaka farm there (add link to Azaka farm guide).
+Finally you may use Pilfer farming which is available on a few farming maps (todo description).
+
+In my current setup I am able to farm up to e105 favor, with 40 pilfer stacks.
+Usually, going higher than e100 you need the following.
+
+\subsubsection{e100+ favor}
+
+I want more than e100 favor !
+For that, what we do is favor farming.
+It requires a long time, so prepare yourself in advance.
+
+First, upgrade your favor as mush as you can.
+Then you have to farm non-permanent campaigns.
+This relies on farming high favor in events, time gates and Trial of Tiamat if you can.
+Once you have high enough favor, wait for the possibility of converting this high favor into the campaign you want to get higher.
+
+Note for events:
+You may keep multiple parties open with high favor farmed in each.
+You need to have one party that is not in the event.
+At the end of the event, go into the party that is not in the event.
+Convert your favor.
+Go into a event farming group.
+Close it.
+Convert your favor.
+(ect).
+You can convert 4 times per event at the time of writting.
+
+
+
+
+
 \subsection{Buying and Opening Chests}
 \subsection{Potion usage}
-\label{sec:potionSustain}
 
 \subsubsection{Potion Sustain}
+\label{sec:potionSustain}
 
+I always refer to a message from Animehimo regarding potion sustain.
+Reseting around 700 is enough to sustain \textit{Small} potions.
+Reseting around 800 is enough to sustain \textit{Medium} \textbf{or} \textit{Large} (not both at the same time).
+Reseting around 1200 allows us to sustain \textit{medium}.
+
+
+\section{Other Useful Guides}
+
+//Todo
 
 
 \section{Asking for help}
 //Todo, template to ask for help.
+
+
+
+\section{Change Log}
+
+2022/07/22 
+\begin{itemize}
+    \item Add Speed Champions in BUD tunning.
+    \item Add Dealing With Favors Too High.
+    \item Add speed champions in recommendation (Thanks @Yukon !)
+    \item Add comment that stability is always more important than squeezing a bit more out of the farm (Thanks @Yukon !)
+    \item Add How about Modron cores section.
+    \item Add basic potion sustainability section.
+    \item Add Extra Free Gems section.
+    \item Few random fixes.
+    \item Should I stack on multiple zones
+    \item Add High Favor Farming
+\end{itemize}
 
 \section{Acknowledgments}
 
 Thanks to everyone who read it and will read it.
 Particularly want to thank the following persons for the review(s) from: Primate.
 
-
-\section{Change log}
 
 \end{document}
