@@ -9,7 +9,11 @@
 \author{Hogo}
 \date{July 2022}
 
-\graphicspath{{./images/}}
+\graphicspath{
+{./images/}
+{./images/champions}
+{./images/planning}
+}
 
 
 \begin{document}
@@ -178,7 +182,63 @@ The main adventures that exhibit  \textbf{Quick Transition}s are \textit{Tall Ta
 They are of course other adventures that exhibit QTs, but they are less popular since they have less \textbf{Quick Transition}s (Picture).
 Moreover, a \textbf{Quick Transition} depends on the number of jumps (picture)
 I also developed a query-able database of the adventure of Idle Champion that allows anyone to compute the \textbf{Quick Transition}s for any adventure \footnote{I'm the only use so it's rought for now. \url{https://github.com/hogoww/IdleChampionTooling}} based on Kleho's website \footnote{\url{idle.kleho.ru/}}.
+This allows me to quickly compute any QTs for a given adventure (Table~\ref{tbl:tallTaleQts} or to find out which adventure has the most QTs for a given jump (Table~\ref{tbl:fourJumpsQts}).
 
+\begin{table}[ht!]
+\centering
+\caption{Number of QTs for the The Everlasting Rime aventure, depending on the number of jumps.
+For example, If I have 2 jumps, 48\% of the transitions are QTs.
+}
+\label{tbl:tallTaleQts}
+\begin{small}
+\begin{tabular}{ c | c }
+\toprule
+Number of jump & number of QTs \\
+\midrule
+0 & 54\% \\
+1 & 52\% \\
+2 & 48\% \\
+3 & 48\% \\
+4 & 50\% \\
+5 & 44\% \\
+6 & 42\% \\
+7 & 40\% \\
+8 & 38\% \\
+9 & 40\% \\
+10 & 34\% \\
+11 & 32\% \\
+12 & 30\% \\
+13 & 28\% \\
+14 & 30\% \\
+\bottomrule
+\end{tabular}
+\end{small}
+\end{table}
+
+\begin{table}[ht!]
+\centering
+\caption{Number of QTs per adventures for 4 jumps \briv.
+}
+\label{tbl:fourJumpsQts}
+\begin{small}
+\begin{tabular}{ l c c }
+\toprule
+Campaign & Adventure & Number of QTs \\
+\midrule
+Witchlight & Tall Tales & 60\% \\
+Rime of the Frostmaiden & The Everlasting Rime & 50\% \\
+Witchlight & The Firy Rings of Thither & 30\% \\
+Descent into Avernus & The Path of Dreams 30\% \\
+Descent into Avernus & Resolve Amongst Chaos & 30\% \\
+Descent into Avernus & The Bleeding Citadel & 30\% \\
+Grand Tour & Excavating History & 30\% \\
+Grand Tour & Towering expectation & 30\% \\
+Witchlight & Slack-jawed Lorna & 20\% \\
+Rime of the Frostmaiden & Ending the Rime - Part 1 & 20\% \\
+\bottomrule
+\end{tabular}
+\end{small}
+\end{table}
 
 \subsection{Guide specific.}
 
