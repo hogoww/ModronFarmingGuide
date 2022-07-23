@@ -3,10 +3,14 @@
 \usepackage{booktabs}
 \usepackage{hyperref}
 \usepackage{xspace}
+\usepackage{graphicx}
 
 \title{Scriptless Idle Modron Briv Farming}
 \author{Hogo}
 \date{July 2022}
+
+\graphicspath{{./images/}}
+
 
 \begin{document}
 
@@ -22,13 +26,16 @@
 
 
 
+\newcommand{\championMiniature}[1]{\includegraphics[width=8px]{#1}}
+
+
 %add champion inlined image https://tex.stackexchange.com/questions/374192/how-to-use-figures-as-inline-images
 %%%%% Characters
 \newcommand{\artemis}{Artemis\xspace}
 \newcommand{\arkhan}{Arkhan\xspace}
 \newcommand{\azaka}{Azaka\xspace}
 \newcommand{\blackViper}{Black Viper\xspace}
-\newcommand{\briv}{Briv\xspace}
+\newcommand{\briv}{Briv\xspace\championMiniature{briv.png}\xspace}
 \newcommand{\baeloth}{Baeloth\xspace}
 \newcommand{\celeste}{Celeste\xspace}
 \newcommand{\deekin}{Deekin\xspace}
