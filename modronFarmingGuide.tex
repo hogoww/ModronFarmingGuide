@@ -23,12 +23,14 @@
 
 
 %add champion inlined image https://tex.stackexchange.com/questions/374192/how-to-use-figures-as-inline-images
+%%%%% Characters
 \newcommand{\artemis}{Artemis\xspace}
 \newcommand{\arkhan}{Arkhan\xspace}
 \newcommand{\azaka}{Azaka\xspace}
 \newcommand{\blackViper}{Black Viper\xspace}
 \newcommand{\briv}{Briv\xspace}
 \newcommand{\baeloth}{Baeloth\xspace}
+\newcommand{\celeste}{Celeste\xspace}
 \newcommand{\deekin}{Deekin\xspace}
 \newcommand{\desmond}{Desmond\xspace}
 \newcommand{\dragonbait}{Dragonbait\xspace}
@@ -41,12 +43,19 @@
 \newcommand{\nahara}{Nahara\xspace}
 \newcommand{\nerys}{Nerys\xspace}
 \newcommand{\rust}{Rust\xspace}
+\newcommand{\selise}{Selise\xspace}
 \newcommand{\sentry}{Sentry\xspace}
 \newcommand{\shandie}{Shandie\xspace}
 \newcommand{\tyril}{Tyril\xspace}
 \newcommand{\yorven}{Yorven\xspace}
+\newcommand{\walnut}{Walnut\xspace}
 \newcommand{\widdle}{Widdle\xspace}
 \newcommand{\zorbu}{Zorbu\xspace}
+
+
+
+%%%%% Patrons
+\newcommand{\vjara}{Vjara\xspace}
 
 \section{Disclaimer}
 
@@ -56,11 +65,13 @@ You may notice that there are a lot of placeholders for now.
 Particularly, I am yet to add pictures.
 This is planned, it's just easier to add a lot of text first.
 
-If you have remarks on things that are \textbf{already} typed in, please feel free to comment on it in the modron \briv thread on the Idle champion discord.
-(links will be added someday).
+If you have remarks on things that are \textbf{already} typed in, please feel free to comment on it in the modron \briv thread on the Idle champion discord (links will be added someday) Or wisp me on Discord directly: hogo\#8547.
 You can also suggest some more placeholders section I will write in the future !
-Or wisp me on Discord directly: hogo\#8547.
+I also try to give credit whenever I remember about it.
+Please tell me if I miss some, or give me the link to a message if I haven't tracked it down yet.
 If you're polite and nice, I usually am nice too :)
+
+Enjoy your read !
 
 \section{Introduction}
 
@@ -136,9 +147,12 @@ BUD is the highest damage that was set by a champion.
 It is used to compute the damages of champion's ultimate damages, and firebreath potions.
 More importantly it is the best visualization of your current damages.
 
-\subsection{Guide specific.}
 
-\subsubsection{Concepts}
+\paragraph{Overwhelm}
+
+//todo
+
+\subsection{Advanced Concepts}
 
 \paragraph{Perfect Jumps.}
 
@@ -149,6 +163,20 @@ The item level required to be perfect jumps are computable with multiple tools.
 Particularly I personnaly use the great Byteglow online tool todoref.
 This technique is significantly easier to use with a perfect jump. 
 
+\paragraph{Quick Transition (QT)}
+
+Usually, when the party finishes the zone's requirement, it walks over to the next area.
+A \textbf{Quick Transition} is a transition between two zones in which the party does not move.
+This is \textbf{significantly} faster for gem farm.
+The main adventures that exhibit  \textbf{Quick Transition}s are \textit{Tall Tale} (TT) and \textit{The Everlasting Rime} (ER).
+They are of course other adventures that exhibit QTs, but they are less popular since they have less \textbf{Quick Transition}s (Picture).
+Moreover, a \textbf{Quick Transition} depends on the number of jumps (picture)
+I also developed a query-able database of the adventure of Idle Champion that allows anyone to compute the \textbf{Quick Transition}s for any adventure \footnote{I'm the only use so it's rought for now. \url{https://github.com/hogoww/IdleChampionTooling}} based on Kleho's website \footnote{\url{idle.kleho.ru/}}.
+
+
+\subsection{Guide specific.}
+
+\subsubsection{Concepts}
 
 \paragraph{Click Wall.}
 
@@ -172,7 +200,7 @@ In this guide, it's a zone on which your click damage are not able to kill anyth
 The \textbf{Zone Spread} is the number of areas between your Click Wall and your Hard Wall.
 It allows you to loose click damage until a point in which the click damage is not able to kill anything anymore.
 %Need to find correct credit.
-Calculated by NNN, you need a \textbf{Zone Spread} of at least 17 areas to loose enough click damage to not kill anything on your hard wall.
+Calculated by NNN(find credit), you need a \textbf{Zone Spread} of at least 17 areas to loose enough click damage to not kill anything on your hard wall.
 
 \subsubsection{Champion Jobs}
 
@@ -200,9 +228,9 @@ It's usually the most buffed damage dealer.
 
 \section{Using Modron \briv Stacking}
 
-\subsection{Requirements ?}
+\subsection{Requirements}
 
-Requierements:
+The following are required:
 \begin{itemize}
     \item A modron core with automation available;
     \item A \briv with at least 1.2 jumps (ref zeke);
@@ -211,7 +239,7 @@ Requierements:
     \item Adequate adventure.
 \end{itemize}
 
-Optional (but pretty nice !)
+Optional (but pretty nice !):
 \begin{itemize}
     \item Other champions improving Speed other than \briv (see Section \ref{sec:stepFour}).
     Recommended: \widdle (2), \shandie (6) and \hewmaan (8).
@@ -224,10 +252,9 @@ Optional (but pretty nice !)
 \subsection{General Concept}
 
 Beware: this technique is \textbf{significantly more difficult} to set up for non-perfect jump.
-Therefore I describe the case of non-perfect jump)
 I advise to stay at perfect jumps starting at 3 jumps.
-Only put contracts when you have enough to go the next perfect jump chance.
-Moreover, if you are using a non-perfect jump \briv, I'd advise to look at the part for perfect jumps first, as it is probably easier to understand.
+Only put contracts when you have enough to go the next perfect jump chance (Section \ref{sec:upgradeIlvl}).
+Moreover, even if you are using a non-perfect jump \briv (Section \ref{sec:nonPerfectJumps}), I'd advise to look at the part for perfect jumps first, as it is probably easier to understand.
 
 The gem farm goes about as such:
 \begin{itemize}
@@ -329,6 +356,9 @@ Only look at how much health your \briv needs to get enough stacks.
 
 To improve survivability:
 \begin{description}
+    \item[Feats] The best feat for \briv so far are the Overwhelm feats by far.
+    The health feats, although tempting, do not compare.
+    For other tanks, the health feat increases briv's health, hence they are the best in this case.
     \item[Mirtt's \textbf{Perk's Up}.] This perk, that increases tank's healing.
     \item[More health] there are multiple ways of increasing health.
         \begin{itemize}
@@ -349,14 +379,24 @@ To improve survivability:
             Note that the more tanks are used, the more health the potions are bringing.
         \end{itemize}
     \item[\baeloth's djinn.] \baeloth's djinn ability gives 30 second of invincibility upon death.
-    \item[Damage reduction.] The only one so far that I can think of is \yorven.
+    \item[Damage reduction.] This is currently not viable.
+    \begin{description}
+    \item[\yorven.]
+    \yorven reduces the damage taken by adjacent champions by a small amount.
     However \yorven puts a debuff on a single enemy on each attack.
-    It can be a bit difficult to deal with to tune your BUD (Section~\ref{sec:stepFour}).
-    Not worth it in my opinion.
+    This debuff increases the click damages, making tuning your click damage more difficult (Section~\ref{sec:stepTwo} and Section~\ref{sec:stepFour})
+    Similarly, this debuff increases the damages of champions, making tuning of your BUD more difficult (Section~\ref{sec:stepFour}).
+    \item[\selise] 
+    \selise reduces the damage taken from melee while in \textbf{wall stance} for the champions in her column.
+    However you need use the ultimate once to get into \textbf{wall stance}.
+    Moreover, while in \textit{aggressive stance}, the default stance, she stuns enemies, reducing the number of stacks you'd get.
+    Finally, the placement requirement is just not viable most of the time because of Hew's requirements.
+    \end{description}
     \item[Healing.]
     Every healing ability (besides \briv's) is around a fixed e4 health.
     However very quickly briv gets e7+ health (by just adding \dragonbait in).
     Therefore, it's mostly useless.
+    A few ultimates attacks are healing massively, namely \celeste, \widdle and \walnut but none of them are viable in a gem farming setup.
 \end{description}
 
 
@@ -384,7 +424,7 @@ Usually we consider that if a slot can stay empty, that's better than a characte
 
 
 \begin{description}
-    \item[\deekin] \deekin is a very good plug and play champion.
+    \item[\deekin.] (1) \deekin is a very good plug and play champion.
     Put him anywhere and enjoy !
     He increases the speed of enemy pop.
     The specialization is \textit{Boss Wants Speed} (right).
@@ -393,7 +433,7 @@ Usually we consider that if a slot can stay empty, that's better than a characte
     Using \deekin and \widdle is redundant and usually should be avoided.
     Usually we consider that it is either \deekin OR \widdle.
     
-    \item[\widdle] \widdle is usually considered to be better than \deekin.
+    \item[\widdle.] (2)\widdle is usually considered to be better than \deekin.
     She should be next to as many champion as possible.
     I have read multiple time that once \widdle's \textit{Tasty Friends} has 1000\%, it's capped (I have not verified myself).
     She increases the speed of enemy pop.
@@ -403,14 +443,14 @@ Usually we consider that if a slot can stay empty, that's better than a characte
     Using \deekin and \widdle is redundant and usually should be avoided.
     Usually we consider that it is either \deekin OR \widdle.
     
-    \item[\nahara] \nahara reduces quests requirement as long as she \textit{should} kill enemies even though they die from clicks.
+    \item[\nahara.] (3) \nahara reduces quests requirement as long as she \textit{should} kill enemies even though they die from clicks.
     Her placement imports little, but if you want to have as much benefit from her as possible, she should be your BUD setter.
     The specialization is \textit{A Skilled Lyre} (right).
     Her speed skill \textit{To Amuse or Avenge} is not affected by gear/feats at this time.
     Note: it can apparently become pretty laggy when you hit 100 enemies while stacking.
     Note2: see common note on quest requirement after this list.
     
-    \item[\sentry] \sentry reduces quest requirements if she wasn't hit by enemy on the previous area.
+    \item[\sentry] (4) \sentry reduces quest requirements if she wasn't hit by enemy on the previous area.
     Her placement does not change anything.
     The specialization is \textit{Echo's Will} (middle).
     \textit{Echo: Resolution} is buffed by \sentry 4th item.
@@ -419,8 +459,7 @@ Usually we consider that if a slot can stay empty, that's better than a characte
     Note: She is conflicting with Baeloth, so if you can use another trigger than baeloth, that's usually better !
     Note2: see common note on quest requirement after this list.
     
-    
-    \item[\shandie] Probably the best plug and play champion.
+    \item[\shandie] (6) Probably the best plug and play champion.
     After a minute without any champion being attacked, \shandie increases the speed of the game.
     Her speed ability is not affected by her placement.
     %She buffs damages for the column in front of her with \textit{Explosive Arrow} depending on enemy hit by her attack as well as in a radius of two cases with \textit{Agile Allies}.
@@ -428,7 +467,7 @@ Usually we consider that if a slot can stay empty, that's better than a characte
     %The number of enemy hit might be inconsistent, particularly when stacking on range enemies.
     Her speed ability \textit{Dash} is only affected by specialization \textit{Ranger Training} (left).
     
-    \item[\hewmaan] \hewmaan is the second best speed champion, right after briv (even after the recent nerf).
+    \item[\hewmaan.] (8) \hewmaan is the second best speed champion, right after briv (even after the recent nerf).
     They increases the number of quest item looted and enemy kill counts.
     Their speed ability depends on their placement in the formation.
     \hewmaan.
@@ -438,20 +477,31 @@ Usually we consider that if a slot can stay empty, that's better than a characte
     Their \textit{Teamwork} ability is buffed by the 4th item as well as very good feats.
     It is capped, check out Byteglow.
     Note: see common note on quest requirement after this list.
-    \item[\havilar] //TO CHECK, I'm Lazy, so not now. 
-    Unlike what's said in Zeke's guide, \havilar's ability has been fixed and is not usable anymore.
-    \item[\melf] Considered to be less good than an empty spot by the scripting community.
+    \item[\havilar.] (10) This is currently broken.
+    The developers have said they are considering adding this back in the future \footnote{Developer insights: \url{https://www.twitch.tv/videos/1538716891}.
+    Community recap (thanks @J\_Dawg\_27!): https://discord.com/channels/357247482247380994/357247483111276546/999801304639602718}
+    Out of \havilar's 4 imp, Dembo double the quest drop and kill counts from \textbf{imps} enemies.
+    Therefore this does not work in every map, but it has its uses.
+    Note: see common note on quest requirement after this list.
+    \item[\melf.] (12) Considered to be worse than an empty spot by the scripting community.
     I trust them, and do not explain him further.
 \end{description}
 
+An additional speed feature that is not from a champion is the \textbf{Brisk Benefactor} Witchlight local blessing.
+It reduces quest requirements (in Witchlight adventure) by 20\% while running the adventure with a patron.
+That is pretty neat given that \vjara has constraints that works \textbf{very} well with usual speed gem farming !
+The only downside is that you have to use the constitution feat for widdle.
+This introduces well the note on quests requirements.
+
 Note on quest requirement: Quests requirements reductions might not all be worth it at once.
+For example \vjara + \nahara brings less benefit than only using one of them.
+//TODO more detailed note
 %tocheck
 %Particularly, we've seen low interest in having \sentry and \nahara (Thanks to Primate's).
-//TODO more detailed note
 
 \paragraph{Choosing a trigger champion.}
 
-I identify 3 kinds of possible triggers:
+I identify 3 kinds of possible triggers (there are a few more that do not look viable to me):
 \begin{description}
     \item[Enemy count] There are a few champions that give damage boost depending on available enemy.
     For example, \shandie's explosive arrow.
@@ -537,6 +587,8 @@ Things that may add inconsistency that we identified are:
 \subsubsection{Non-Perfect Jumps Particularity}
 \label{sec:nonPerfectJumps}
 
+todo
+
 \subsection{Choosing an Adventure}
 
 The first question we get asked is which adventure to target ?
@@ -548,25 +600,28 @@ If you want to know how to choose an adventure, it's after the list !
 \begin{table}[ht!]
 \caption{Adventures for Modron \briv gem farming.
 The general adventures are adventures that can be chosen for any kind of jump chances, perfect or not.
-Particularly, we currently do not have a good adventure for 6 or 8 jumps \briv .}
+Particularly, we currently do not have a good adventure for 6 or 8 jumps \briv .
+I also put Minsc specialization as this is the most common click wall extender.
+}
 \label{tbl:adventures}
 \begin{small}
-\begin{tabular}{ l | l c c c }
+\begin{tabular}{ l | l c c c c }
 \toprule
-\textbf{Jumps} & \textbf{Campaign} & \textbf{Adventure} & \textbf{Click Wall} & \textbf{Stacking Zone}\\
+\textbf{Jumps} & \textbf{Campaign} & \textbf{Adventure} & \textbf{Click} & \textbf{Stacking} & \textbf{Favored}\\
+&&&\textbf{Wall} & \textbf{Zone}& \textbf{Enemy}\\
 \midrule
-General & Sword Coast          & Supply Run & &\\
-        &                      & Terror In the Dark & &\\
-        & Descent Into Avernus & todo & &\\
+0       & Sword Coast  & Supply Run         & z5 & z19 & Beast \\
+        &              & Terror In the Dark & z6 & z18 & Beast\\
+        & Avernus      & todo & & &\\
 \separatingLine
-3       &  IceWind Dale & The Everlasting Rime (ER) &  &\\
+3       &  IWD & The Everlasting Rime (ER) & z61 & z97 & Beast\\
 \separatingLine
-4       &  IceWind Dale & The Everlasting Rime (ER) &  & z41\\
-        &  WhitchLight & Tall Tales (TT) &  & z41\\
+4       &  IWD & The Everlasting Rime (ER) & z21 & z41 & Beast\\
+        &  WhitchLight & Tall Tales (TT)   & z11 & z41 & Fey\\
 \separatingLine
-7       &  IceWind Dale & The Everlasting Rime (ER) &  & z97\\
+7       &  IWD & The Everlasting Rime (ER) & z57 & z97 & Beast \\
 \separatingLine
-9       & WhitchLight & Tall Tales (TT) &  & z41\\
+9       & WhitchLight & Tall Tales (TT)    & z11 & z41 & Fey \\
 \bottomrule
 \end{tabular}
 \end{small}
@@ -575,9 +630,15 @@ General & Sword Coast          & Supply Run & &\\
 
 \subsubsection{3 Jumps}
 
+Everlasting Rime is Queen
+
 \subsubsection{4 Jumps}
 
+Tall Tale > Everlasting Rime > anything else, basically
+
 \subsubsection{7 Jumps}
+
+Everlasting Rime is Queen
 
 \subsubsection{9 Jumps}
 
@@ -592,6 +653,14 @@ Back to the great Tall Tale adventure
 
 \subsection{Extra Free Gems}
 
+For perfect jumps only.
+
+If after your stacking zone, you have enough for one more jump, you can reset a zN+1.
+For example in ER, you can reset at z42 rather than z41.
+The jump will effectively happen, making the party go to z46.
+This will award you the z45 gem bag for free.
+
+You should always reset at z42 rather than z45 though, because if for some reason you understack and do not have enough for this extra jump, you will only have to clear one area rather than 4.
 
 
 \section{Frequently Asked Questions}
@@ -612,6 +681,7 @@ If you have too high favor, you have multiple choices:
 
 
 \subsection{Getting Perfect Jump Chances}
+\label{sec:upgradeIlvl}
 
 How to get perfect jump chances ?
 The newly released feat capping the effect at perfect 4 jumps is not the only way.
@@ -645,7 +715,7 @@ Any other modron core that has automation available is fine.
 This method can be used to level up modron cores.
 
 
-\subsection{Should I stack on multiple zones}
+\subsection{Should I stack on multiple zones ?}
 
 tl;dr: no.
 Rationale behind this is that you get a maximum number of stacks per seconds when you have more enemies spawned.
@@ -726,7 +796,19 @@ Reseting around 1200 allows us to sustain \textit{medium}.
     \item Should I stack on multiple zones
     \item Add High Favor Farming
 \end{itemize}
-
+2022/07/23
+\begin{itemize}
+    \item Random fixes
+    \item Add QTs definitions
+    \item Add Feats for survivability (thanks @Kuvuplan !).
+    \item Add \selise for damage reduction (thanks @Kuvuplan !).
+    \item Add healing ultimates (thanks @Kuvuplan !).
+    \item Add Havilar's speed (thanks @Lediath and @Kuvuplan !).
+    \item Add Vjara quest reduction
+    \item Fill up table of adventures
+    \item Add extra free gems section
+\end{itemize}
+    
 \section{Acknowledgments}
 
 Thanks to everyone who read it and will read it.
