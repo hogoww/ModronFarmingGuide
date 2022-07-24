@@ -12,7 +12,8 @@
 \graphicspath{
 {./images/}
 {./images/champions}
-{./images/planning}
+{./images/sevenJumps}
+{./images/sevenJumps/formation1}
 }
 
 
@@ -164,6 +165,35 @@ More importantly it is the best visualization of your current damages.
 
 \subsection{Advanced Concepts}
 
+\paragraph{Gem Per Hours}
+
+Metric used by Byteglow and Scripters to compare the efficiency of setups.
+
+\paragraph{Boss Per Hours (BPH).}
+
+Metric used by Byteglow and Scripters to compare the efficiency of setups.
+This is a better measure of comparison than GPH because it varies less.
+
+
+\paragraph{Potion Efficiency}
+
+\textbf{Potion efficiency} means "how much of this potion am I using?".
+This is particularly important for speed potions, as the others are generatlly not used for most of the run.
+The ideal efficiency is to use as much as the possible potion time.
+For example, using a small potion is 5 minutes.
+If I use a small potion for a 1 minute reset, I use 20\% of my potion, this is not so good.
+If I use a small potion for a 10 minute reset, I use 100\% of my potion, this is good because we profit from it all the time.
+
+
+
+\paragraph{Potion Sustain}
+
+Potion Sustain means "If I use a potion on every run, how long until I run out?".
+Sustaining potions is difficult (Section \ref{sec:potionSustain}).
+You do not have to sustain your potions all of the time.
+Just remember that if it's a requirement for you (particularly for health potions), your setup will end up breaking.
+
+
 \paragraph{Perfect Jumps.}
 
 \briv chances to jump over the next N areas.
@@ -183,6 +213,15 @@ They are of course other adventures that exhibit QTs, but they are less popular 
 Moreover, a \textbf{Quick Transition} depends on the number of jumps (picture)
 I also developed a query-able database of the adventure of Idle Champion that allows anyone to compute the \textbf{Quick Transition}s for any adventure \footnote{I'm the only use so it's rought for now. \url{https://github.com/hogoww/IdleChampionTooling}} based on Kleho's website \footnote{\url{idle.kleho.ru/}}.
 This allows me to quickly compute any QTs for a given adventure (Table~\ref{tbl:tallTaleQts} or to find out which adventure has the most QTs for a given jump (Table~\ref{tbl:fourJumpsQts}).
+
+\paragraph{Zone Loop.}
+The \textbf{Zone loop} is the number of zones you need to clear in order to be back to the area where you started.
+A few illustrative example.
+I'm starting z1.
+If I have 0 jumps, I will encounter this area again at z51.
+If I have 4 jumps, I will encounter this area again at z51.
+If I have 7 jumps, I will encounter this area again at z201.
+
 
 \begin{table}[ht!]
 \centering
@@ -700,6 +739,7 @@ I also put Minsc specialization as this is the most common click wall extender.
 \end{small}
 \end{table}
 
+For each kind of jumps, I will detail further some detailed examples of setups.
 
 \subsubsection{3 Jumps}
 
@@ -711,7 +751,51 @@ Tall Tale > Everlasting Rime > anything else, basically
 
 \subsubsection{7 Jumps}
 
-Everlasting Rime is Queen
+The Everlasting Rime is Queen.
+It is the adventure with the most QTs for 7 jumps (50\%)
+The main downside is that it has only one viable stacking and reset points, that is 200 areas apart.
+The jump loop is 200 areas.
+Therefore the two realistic points are stacking on 897 (1866 stacks) and 1097 (4206 stacks).
+897 reset: Easier, better potion efficiency, better BPH.
+1097 reset: Hard, better potion sustain.
+
+With 7 jumps, you avoid the main problem of The Everlasting Rime which is the z50 boss, which almost always breaks \shandie's dash.
+Finally, minor annoyances are barricades (z) and 3 hit based health (z33).
+
+
+\paragraph{A first 1097 stacking}
+
+/!\\ Not potion sustainable /!\\.
+
+Gold find: 2e138\newline
+Favor: 5e133\newline
+Formation: Figure~\ref{fig:sevenJumpsFormation1}\newline
+Click Wall: 1057\newline
+Stacking Zone: z1097\newline
+Resetting: z1098\newline
+BUD required: e337\newline
+Briv health required: Around 5e10 (Still the required values)\newline
+Click Wall Extender: Minsc (beast)\newline
+Trigger Champion: Baeloth\newline
+BUD Setter: Artemis (about 6k ilvl)\newline
+Legendary Gear Bonus: 7.97e40\% damages\newline
+Core: Fast Core 1.62e24\% damages\newline
+Potions: Speed (small 1 + medium 1) Health (small 993 + medium 993 + large 1)
+
+Details:
+It was quite tricky to have enough survivability, and enough damages.
+I also had no space for additional gold find champions while my favor was too low.
+So far I couldn't use \widdle, I do not have the damages.
+Similarly, I had to have \tyril.
+This setup is not sustainable because I need large health potions to have enough health to survive long enough to stack.
+Which is not sustainable.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{sevenJumpsFormation1}
+    \caption{Basic formation for a first z1097 farming.}%
+    \label{fig:sevenJumpsFormation1}
+\end{figure}
 
 \subsubsection{9 Jumps}
 
@@ -720,7 +804,13 @@ Back to the great Tall Tale adventure
 \subsubsection{Specific Adventure Set Up}
 
 
+sevenJumpsFormation1
+
 \subsection{Champion Roles}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \section{Tips And Tricks}
 
@@ -734,6 +824,8 @@ The jump will effectively happen, making the party go to z46.
 This will award you the z45 gem bag for free.
 
 You should always reset at z42 rather than z45 though, because if for some reason you understack and do not have enough for this extra jump, you will only have to clear one area rather than 4.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \section{Frequently Asked Questions}
@@ -792,10 +884,27 @@ This method can be used to level up modron cores.
 
 \subsection{Should I stack on multiple zones ?}
 
-tl;dr: no.
+tl;dr: no.\newline
 Rationale behind this is that you get a maximum number of stacks per seconds when you have more enemies spawned.
 Therefore it's always more efficient to stack on one zone.
 If you cannot, it's probably because you want to reset too high.
+
+
+
+\subsection{What Should My Upgrade Look Like ?}
+
+tl;dr: x100.\newline
+x25 might also work.
+This should ensure that you get the \textbf{Metalborn} specialization for \briv before you start jumping.
+
+
+\subsection{Can I Start Jumping After z1}
+
+tl;dr: no.\newline
+At least, I couldn't figure it out.
+I tried modifying the upgrade away from x100, but this didn't give me any realistic viable results.
+If someone finds something, I'm interested !
+
 
 \subsection{High Favor Farming}
 
@@ -886,6 +995,19 @@ Reseting around 1200 allows us to sustain \textit{medium}.
     \item Add Icons for every champions.
     \item Add clickers on ultimates as inconsistency.
     \item Add tables explaining QTs.
+\end{itemize}
+
+
+2022/07/24
+\begin{itemize}
+    \item Start 7 jump exemple.
+    \item add What Should My Upgrade Look Like ?
+    \item add Can I Start Jumping After z1 ?
+    \item add zone loop definition.
+    \item add GPH definition.
+    \item add BPH definition.
+    \item add potion sustain definition.
+    \item add potion efficiency definition.
 \end{itemize}
     
 \section{Acknowledgments}
