@@ -212,7 +212,7 @@ This is \textbf{significantly} faster for gem farm.
 The main adventures that exhibit  \textbf{Quick Transition}s are \textit{Tall Tale} (TT) and \textit{The Everlasting Rime} (ER).
 They are of course other adventures that exhibit QTs, but they are less popular since they have less \textbf{Quick Transition}s (Picture).
 Moreover, a \textbf{Quick Transition} depends on the number of jumps (picture)
-I also developed a query-able database of the adventure of Idle Champion that allows anyone to compute the \textbf{Quick Transition}s for any adventure \footnote{I'm the only use so it's rought for now. \url{https://github.com/hogoww/IdleChampionTooling}} based on Kleho's website \footnote{\url{idle.kleho.ru/}}.
+I also developed a \href{https://github.com/hogoww/IdleChampionTooling}{query-able database} of the adventure of Idle Champion that allows anyone to compute the \textbf{Quick Transition}s for any adventure  based on  \href{idle.kleho.ru/}{Kleho's website}.
 This allows me to quickly compute any QTs for a given adventure (Table~\ref{tbl:tallTaleQts} or to find out which adventure has the most QTs for a given jump (Table~\ref{tbl:fourJumpsQts}).
 
 \paragraph{Zone Loop.}
@@ -518,7 +518,9 @@ But first, let's add some speed !
 
 Before you start know that adding a champions adds code behavior, image rendering and many things.
 Therefore it adds lag.
-If you can remove a character or a pet at some point
+If you can remove a character or a pet at some point, it's worth doing.
+Same for pets.
+However, it's \textbf{only} when you're already set up, when you know what you are doing, and when you have already a working farm.
 
 \paragraph{Speed champions first !}
 
@@ -584,8 +586,8 @@ Usually we consider that if a slot can stay empty, that's better than a characte
     It is capped, check out Byteglow.
     Note: see common note on quest requirement after this list.
     \item[\havilar.] (10) This is currently broken.
-    The developers have said they are considering adding this back in the future \footnote{Developer insights: \url{https://www.twitch.tv/videos/1538716891}.
-    Community recap (thanks @J\_Dawg\_27!): \url{https://discord.com/channels/357247482247380994/357247483111276546/999801304639602718}}
+    The developers have said they are considering adding this back in the future \footnote{ \href{https://www.twitch.tv/videos/1538716891}{Developer insights}.
+     \href{https://discord.com/channels/357247482247380994/357247483111276546/999801304639602718}{Community recap (thanks @J\_Dawg\_27!)}}
     Out of \havilar's 4 imp, Dembo double the quest drop and kill counts from \textbf{imps} enemies.
     Therefore this does not work in every map, but it has its uses.
     Note: see common note on quest requirement after this list.
@@ -650,7 +652,8 @@ This is because he observe the trigger over multiple champions, and therefore be
 However the jeweled power ability increase your next auto attack upon killing an enemy.
 Therefore your first attack with \artemis on the stacking zone should never kill an enemy.
 
-Another special mention is \nahara
+Another special mention is \nahara.
+//todo to explain
 
 \paragraph{Additional ways of tweaking the damages.}
 
@@ -699,7 +702,32 @@ Things that may add inconsistency that we identified are:
 \subsubsection{Non-Perfect Jumps Particularity}
 \label{sec:nonPerfectJumps}
 
-todo
+First of, not perfect jump is painful.\newline
+I promise it'll get better with perfect jumps.
+
+\paragraph{Stacking enough but not too much.}
+Jumping after your stacking is called overjumping.
+Overjumping prevents you from getting hast stacks, and slows the next run considerably.
+The best part of perfect jump is that you \textbf{cannot} overjump.
+Therefore you just jump all the way through your stacking area, for the best farm ever !
+With non-perfect jump however, the maximum jumps you are able to make safely is to your stacking area.
+Since you do not know how many zone you will jump, rather than calculating a lower bound for your hast stacking, you have to go for an upper bound.
+
+For example todo.
+
+You will jump as much as possible, and walk the rest of the way to the stacking area.
+Which brings me to the next difference.
+
+\paragraph{Click to kill !}
+Not having a click wall extender is not a viable option here. 
+The minimum spread is of 17 areas 
+A perfect 4 jump briv would need to clear 4 areas to get to his stacking area.
+Walking 17 areas, and clearing each of them before getting to the stacking area will just not be efficient at all.
+I propose to you a few adventure to setup on see table~\ref{tbl:adventures}.
+
+\paragraph{The click wall}
+The click wall to aim for is at minimum 17 area before the stacking area.
+I'd recommend going for 20 areas before the stacking zone initially, and then adjusting with gold find from modron core.
 
 \subsection{Choosing an Adventure}
 
@@ -790,7 +818,7 @@ Similarly, I had to have \tyril.
 This setup is not sustainable because I need large health potions to have enough health to survive long enough to stack.
 Which is not sustainable.
 
-\begin{figure}[h]
+\begin{figure}[ht!]
     \centering
     \includegraphics[width=\linewidth]{sevenJumpsFormation1}
     \caption{Basic formation for a first z1097 farming.}%
@@ -803,8 +831,14 @@ Back to the great Tall Tale adventure
 
 \subsubsection{Specific Adventure Set Up}
 
+How do I choose an adventure?
+\begin{enumerate}
+    \item I take the list of adventure per QTs
+    \item I check whether it includes areas I cannot work out (typically, an armored boss)
+    \item I look for a good enough spread, with a viable click wall extender
+    \item I try !
+\end{enumerate}
 
-sevenJumpsFormation1
 
 \subsection{Champion Roles}
 
@@ -958,7 +992,10 @@ Reseting around 1200 allows us to sustain \textit{medium}.
 
 \section{Other Useful Guides}
 
-//Todo
+\begin{itemize}
+\item \href{https://docs.google.com/document/d/1TT5g3BjKDreYQ3MutCRgeSRGYD8a7GrFfZ96bIllT7o/edit?usp=sharing}{Azaka farming}
+\item //Todo
+\end{itemize}
 
 
 \section{Asking for help}
@@ -1006,10 +1043,23 @@ Reseting around 1200 allows us to sustain \textit{medium}.
     \item add Can I Start Jumping After z1 ?
     \item add zone loop definition.
     \item add GPH definition.
-    \item add BPH definition.
+    \item add BPH definqition.
     \item add potion sustain definition.
     \item add potion efficiency definition.
     \item few random fixes.
+\end{itemize}
+
+2022/07/24
+\begin{itemize}
+    \item Fix URLs
+    \item Add Azaka farm guide link
+    \item Fix missing ending for Party and lag paragraph
+\end{itemize}
+    
+2022/07/26
+\begin{itemize}
+    \item Start non-perfect jump specificities
+    \item Start how to choose an adventure
 \end{itemize}
     
 \section{Acknowledgments}
