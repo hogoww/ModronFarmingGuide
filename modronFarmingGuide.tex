@@ -12,6 +12,7 @@
 \graphicspath{
 {./images/}
 {./images/champions}
+{./images/fourJumps}
 {./images/sevenJumps}
 {./images/sevenJumps/formation1}
 }
@@ -34,8 +35,8 @@
 
 \newcommand{\championMiniature}[1]{\includegraphics[width=8px]{#1}}
 
-%add champion inlined image https://tex.stackexchange.com/questions/374192/how-to-use-figures-as-inline-images
 %%%%% Characters
+\newcommand{\alyndra}{Alyndra\xspace}
 \newcommand{\artemis}{Artemis\xspace\championMiniature{artemis}\xspace}
 \newcommand{\arkhan}{Arkhan\xspace\championMiniature{arkhan}\xspace}
 \newcommand{\azaka}{Azaka\xspace\championMiniature{azaka}\xspace}
@@ -54,6 +55,7 @@
 \newcommand{\nayeli}{Nayeli\xspace\championMiniature{nayeli}\xspace}
 \newcommand{\nahara}{Nahara\xspace\championMiniature{nahara}\xspace}
 \newcommand{\nerys}{Nerys\xspace\championMiniature{nerys}\xspace}
+\newcommand{\nrakk}{Nrakk\xspace}
 \newcommand{\rust}{Rust\xspace\championMiniature{rust}\xspace}
 \newcommand{\selise}{Selise\xspace\championMiniature{selise}\xspace}
 \newcommand{\sentry}{Sentry\xspace\championMiniature{sentry}\xspace}
@@ -805,25 +807,53 @@ Feedbacks are welcome !
 tl;dr: Tall Tale $>$ The Everlasting Rimes $>$ anything else, basically.
 
 \textbf{Warning:} I personally prefer to have a perfect 4 jump rather than rely on the feat to stay at 4 jumps.
-This is because the survivability you gain from overwhelm feats is just supperior to the health you'll gain slowly from ilvl.
+This is because the survivability you gain from overwhelm feats is just superior to the health you'll gain slowly from item lvl.
 I'm sure there's a breakpoint when this becomes better.
 Maybe 5 or 6 jumps ilvl are better health wise than a feat? 
 But I do not have data to back this up.
 Take it as my personal grain of salt.
 
-Welcome to the most appreciated number of jumps until 9.
+Welcome to the most appreciated number of jumps until 9 jumps.
 As you will never encounter bosses anymore, only using 3 clickers on the field is enough !
 As you can see in \ref{tbl:fourJumpsQts} Tall Tales has a bit more QTs.
 1 per loop to be precise.
 
-
 If there is a problem, Tall Tales will stop farming completely.
 The Everlasting Rimes is forgiving and will continue working after a problem, although it may need you to restart the efficient farm by restacking briv.
 
-Tall Tale is also eligible to an extra gem bag because the favor enemy is also in z46, you can jump in z47 rather than z42 (Section~\ref{sec:extraFreeGems}).
-
 Tall Tale's favored enemy is \textbf{Fey} whereas The Everlasting Rime is \textbf{Beast}.
-Other than that, they are pretty much the same.
+
+\paragraph{Tall Tales Specificities}
+
+\textbf{Extra Gem Bag.}
+Tall Tale is eligible to an extra gem bag because the favor enemy is also in z46, you can jump in z47 rather than z42 (Section~\ref{sec:extraFreeGems}).
+This gives you an extra gem bag over Everlasting Rime for exactly the same run.
+Beware: if you have been encountering server disconnect issues, that extra jump has been found to possibly cause some \href{https://discord.com/channels/357247482247380994/808221941722906655/1004051568145989733}{issues}.
+
+\textbf{\hewmaan Front-Line.}
+\hewmaan suffers from only 3 adjacency in Tall Tales unlike Everlasting Rime where he's got 4.
+This is worsen by the fact that \hewmaan must be in the front-line to give speed.
+This means that \hewmaan takes attacks that could possibly stack \briv further.
+Luckily, \briv auto-attack taunts enemies it hit, and it hit everyone in a cleave.
+This is often a problem with high stacking zones.
+
+The solution: attack speed.
+From my experience, \briv always had 90 out of the 100 enemies on screen on him with low attack speed.
+
+The ways I found to have more attack speed are based on using \widdle with the following:
+\begin{description}
+    \item[Observe/Usurp] Observe from \artemis and usurp from \arkhan boost the attack speed provided by other champions.
+    \hewmaan is one champion that provides attack speed boost that is observable/usurpable.
+    \hewmaan's buff has to affect a DPS if you're using \artemis and has to affect any character adjacent to \arkhan while \arkhan does not get the buff directly.
+    Similarly neither \artemis nor \arkhan need to be adjacent to \widdle, they just need to have \widdle's buff by any mean, including observance/usurp.
+    
+    \item[\nrakk] \nrakk implies to lose \hewmaan, so I do not really treat him here.
+    
+    \item[\alyndra] \alyndra implies to lose \shandie, so I do not really treat her here.
+    
+    \item[Others?] Please let me know !
+\end{description}
+
 
 \paragraph{Target stacking zones}
 
@@ -840,11 +870,26 @@ I identify 3 possible targets.
     Again, that was before the 20 overwhelm feat).
 \end{description}
 
+\paragraph{Example formations}
 
-\paragraph{Health requirements}
+Here are an example formation for both Tall Tales (Figure~\ref{fig:fourJumpsTallTale}) and Everlasting Rime (Figure~\ref{fig:fourJumpsEverlastingRime}).
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\linewidth]{fourJumpsTallTale}
+    \caption{Basic formation for a first Tall Tale farm.
+    An extra slot is available for more dps or health.}
+    \label{fig:fourJumpsTallTale}
+\end{figure}
 
 
-
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\linewidth]{fourJumpsEverlastingRime}
+    \caption{Basic formation for a first Everlasting Rime farm.
+    An extra slot is available for more dps or health.}
+    \label{fig:fourJumpsEverlastingRime}
+\end{figure}
 
 
 \subsubsection{7 Jumps}
@@ -883,7 +928,7 @@ Core: Fast Core 1.62e24\% damages\newline
 Potions: Speed (small 1 + medium 1) Health (small 993 + medium 993 + large 1)
 
 \textbf{Details:}
-It was quite tricky to have enough survivability, and enough damages.
+It was quite tricky to have enough survivability, and enough damages while keeping the speed champions I wanted.
 I also had no space for additional gold find champions while my favor was too low.
 So far I couldn't use \widdle, I do not have the damages.
 Similarly, I had to have \tyril.
@@ -932,6 +977,8 @@ The jump will effectively happen, making the party go to z46.
 This will award you the z45 gem bag for free.
 
 You should always reset at z42 rather than z45 though, because if for some reason you understack and do not have enough for this extra jump, you will only have to clear one area rather than 3.
+
+Note that z50 extra jumps have been known to cause server connection \href{https://discord.com/channels/357247482247380994/808221941722906655/1004051568145989733}{issues}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1162,6 +1209,14 @@ Plus, they are ranging from pretty good to very very good.
     \item Add 4 jump specificity
     \item Fix a few display issues 
     \item Add extra warning about high stacking number (thanks @Therion242 !)
+\end{itemize}
+
+2022/07/26
+\begin{itemize}
+    \item Random small fixes
+    \item Add \hewmaan front-line issue
+    \item Add warning of getting free z50 jumps (Thanks @Yukon / @Animehimo !)
+    \item add example composition for 4j.
 \end{itemize}
 
     
