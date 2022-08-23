@@ -70,6 +70,7 @@
 
 %%%%% Patrons
 \newcommand{\vjara}{Vjara\xspace}
+\newcommand{\stradh}{Stradh\xspace}
 
 \section{Disclaimer}
 
@@ -480,7 +481,8 @@ To improve survivability:
             To have a tank provide health however, it requires to have some item level in their health item.
             This is why we often choose Evergreen champions that continuously scale up.
             Particularly, \dragonbait, \tyril and \nayeli.
-            \tyril and \nayeli need to be in right specialization.
+            \dragonbait is the best of the 3 because he has a golden shiny available in a \stradh shop.
+            \tyril and \nayeli need to be in right ($\rightarrow$) specialization.
             \item Vjara and Zariel perks increase health moderately.
             \item Champion feats, particularly tanks.
             Careful, overwhelmed feats are better for \briv.
@@ -541,7 +543,7 @@ Usually we consider that if a slot can stay empty, that's better than a characte
     \item[\deekin.] (1) \deekin is a very good plug and play champion.
     Put him anywhere and enjoy !
     He increases the speed of enemy pop.
-    The specialization is \textit{Boss Wants Speed} (right).
+    The specialization is \textit{Boss Wants Speed} (right $\rightarrow$).
     He is improved by a feat that is looted in gold chests.
     It is unaffected by his gear.
     Using \deekin and \widdle is redundant and usually should be avoided.
@@ -559,7 +561,7 @@ Usually we consider that if a slot can stay empty, that's better than a characte
     
     \item[\nahara.] (3) \nahara reduces quests requirement as long as she \textit{should} kill enemies even though they die from clicks.
     Her placement imports little, but if you want to have as much benefit from her as possible, she should be your BUD setter.
-    The specialization is \textit{A Skilled Lyre} (right).
+    The specialization is \textit{A Skilled Lyre} (right $\rightarrow$).
     Her speed skill \textit{To Amuse or Avenge} is not affected by gear/feats at this time.
     Note: it can apparently become pretty laggy when you hit 100 enemies while stacking.
     Note2: see common note on quest requirement after this list.
@@ -579,7 +581,7 @@ Usually we consider that if a slot can stay empty, that's better than a characte
     %She buffs damages for the column in front of her with \textit{Explosive Arrow} depending on enemy hit by her attack as well as in a radius of two cases with \textit{Agile Allies}.
     %Usually I'd advise to not rely on \textit{Explosive Arrow}.
     %The number of enemy hit might be inconsistent, particularly when stacking on range enemies.
-    Her speed ability \textit{Dash} is only affected by specialization \textit{Ranger Training} (left).
+    Her speed ability \textit{Dash} is only affected by specialization \textit{Ranger Training} (left $\leftarrow$).
     
     \item[\hewmaan.] (8) \hewmaan is the second best speed champion, right after\briv (even after the recent nerf).
     They increases the number of quest item looted and enemy kill counts.
@@ -587,7 +589,7 @@ Usually we consider that if a slot can stay empty, that's better than a characte
     \hewmaan.
     They should be in the front column in 3 and 4 column formation, or in the front two column in other formations.
     On top of that, \hewmaan has to be adjacent to as many champions as possible.
-    The specialization is \textit{Carefully Balanced} (right).
+    The specialization is \textit{Carefully Balanced} (right $\rightarrow$).
     Their \textit{Teamwork} ability is buffed by the 4th item as well as very good feats.
     It is capped, check out Byteglow.
     Note: see common note on quest requirement after this list.
@@ -677,8 +679,8 @@ Another special mention is \nahara.
 
 It worked once !\newline
 It will always work !\newline
-
 No.\newline
+
 Things are often inconsistent, particularly at the start.
 We usually have to watch a bit to see how the farm is behaving.
 Don't worry, you'll get a sense of when this will be inconsistent at some point.
@@ -689,17 +691,28 @@ Always save your working setup before experimenting with another setup.
 
 Things that may add inconsistency that we identified are:
 \begin{description}
+    \item[Nothing.] 
+    More specifically, 
+    Sometimes dice roll a bit higher, sometimes lower.
+    That's the curse of dice games.
+    So it may run great once, or ten times, but if you get bad luck sometimes, it may break your farm.
+    
     \item[Lag.]
     The less champions and clickers you have, the less lag you are subject to.
     Less lag, more farm.
     More lag less farm, and inconsistencies.
     
-    \item[Distractions.] Using a 6th clicker to kill distractions may give unexpected inputs of golds, which would give too much click damages.
-    
-    \item[Extra quest rewards.] Level 15th node in the speed core may give different gold inputs by ending some levels early.
+    \item[Distractions.] 
+    Using a 6th clicker to kill distractions may give unexpected inputs of golds, which would give too much click damages.
+    This is true if your spread is quite small.
     This is often not a problem for perfect jumps.
     
-    \item[Using Ultimates] Using ultimates, particularly with clickers.
+    \item[Extra quest rewards.] 
+    Level 15th node in the speed core may give different gold inputs by ending some levels early.
+    This is often not a problem for perfect jumps.
+    
+    \item[Using Ultimates] 
+    Using ultimates, particularly with clickers.
     They may end the run a bit early because the BUD is high enough for an ultimate to kill targets, but low enough that you are not at the expected stacks number yet.
     I used to be able to use ultimates without issues, but not anymore, not sure of why.
 \end{description}
@@ -1144,14 +1157,25 @@ You can convert 4 times per event at the time of writting.
 
 
 \subsection{Buying and Opening Chests}
+
+todo
+
 \subsection{Potion Usage}
 
-\subsection{Using Potions in Modron Resets}
+\subsubsection{Using Potions in Modron Resets}
 
 To use potions in modron resets, you have to set it to an area that you are clearing.
 For example using a potion on z1 will always work.
 If you're 4 jumps, you'll have z6, z11 and so on.
 
+\subsubsection{Warning about lvl1 potions}
+
+\emph{This is a bug}.\newline
+A while back, scripters noticed that their potion usage was too high.
+Specifically, that sometimes potions were used twice.
+This is currently an ongoing bug that happens when using potions on z1 after a modron reset.
+This is \textbf{not} a scripter only bug, this is a modron related bug.
+Many thanks to all of the players that tracked down this bug !
 
 \subsubsection{Potion Sustain}
 \label{sec:potionSustain}
@@ -1304,6 +1328,18 @@ Plus, they are ranging from pretty good to very very good.
     \item Add how to use potion in modron
     \item Add offline briv stacking (thanks Kaighal !)
 \end{itemize}
+
+2022/08/20
+\begin{itemize}
+    \item Small fix to read a bit better (Thanks EsoteriQ!)
+\end{itemize}
+
+2022/08/23
+\begin{itemize}
+    \item Warning about potion usage lvl 1
+    \item Add the inconsistency inherent to the game
+\end{itemize}
+    
     
 \section{Acknowledgments}
 
